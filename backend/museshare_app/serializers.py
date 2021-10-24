@@ -7,10 +7,5 @@ class MuseshareAppSerializer(serializers.ModelSerializer):
     class Meta:
         model = MusicProject
         fields = ('id',
-                  'title',
-                  'description',
-                  'published',
-                  'needs',
-                  'upload',
-                #   'tags'
+                  # Add fields
                   )
