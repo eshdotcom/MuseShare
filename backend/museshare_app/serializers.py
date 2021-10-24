@@ -12,4 +12,5 @@ class MuseshareAppSerializer(serializers.ModelSerializer):
                   'published',
                   'needs',
                   'upload',
-                  'tags')
+                #   'tags'
+                  )
