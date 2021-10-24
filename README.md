@@ -1,3 +1,2 @@
 # MuseShare
-### by Arjun Srivastava, Esh Sathiyamoorthy
-An open-source music collaboration web app!
+An open-source music collaboration web app by Arjun Srivastava and Esh Sathiyamoorthy
