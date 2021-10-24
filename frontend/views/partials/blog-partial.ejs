@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Partial for <head>  -->
+    <%- include('head-partial') %>
+    <!-- Link to stylesheet  -->
+    <link rel="stylesheet" href="./../css/blog-styles.css">
+
+    <body>
+        <!-- Navbar -->
+        <%- include('navbar-partial') %>
+        <!-- Main header -->
+        <div class="row blog-intro-row">
+            <div class="col">
+                <h1 class="blog-main-header"> Bridge Blog </h1>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="row blog-main-row">
+
+            <!-- Column 1 (vertical menu) -->
+            <div class="col-2 blog-menu-col">
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <% for(let topic of topicData) {  %>
+                            <li class="nav-item topic-menu-item">
+                                <a href='bridge-blog/<%= topic.name %>'><span id="topic-menu-item-text"><%= topic.name %> ></span></a>
+                                <hr>
+                            </li>
+                        <% }                              %>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 2 (posts) -->
+            <div class="col-10 blog-content-col">
+                <div class="container cards-container">
+                    <!-- *Each topic adds cards here*  -->
+                    <h2>Topic cards here</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

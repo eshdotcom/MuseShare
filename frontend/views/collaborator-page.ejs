@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Partial for <head>  -->
+    <%- include('partials/head-partial') %>
+    <!-- Link to stylesheet  -->
+    <link rel="stylesheet" href="./../css/collaborator-page-styles.css">
+
+    <body>
+        <!-- Navbar -->
+        <%- include('partials/navbar-partial') %>
+        <!-- Main header -->
+        <div class="row blog-intro-row">
+            <div class="col">
+                <h1 class="blog-main-header">Collaborator Page</h1>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="row blog-main-row">
+
+            <!-- Column 1 (vertical menu) -->
+            <div class="col-2 blog-menu-col">
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <% for(let category of projectData) {  %>
+                            <li class="nav-item topic-menu-item">
+                                <a href='collaborator-page'><span id="topic-menu-item-text"><%= category.need_category_name %>></span></a>
+                                <hr>
+                            </li>
+                        <% }                                   %>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 2 (posts) -->
+            <div class="col-10 blog-content-col">
+                <div class="container empty-cards-container">
+                    <!-- *Each topic adds cards here*  -->
+                    <p class="blog-intro-p">
+                        Welcome to the MuseShare Collaborator Page. <br>
+                        Click a tag in the menu to explore projects uploaded by creators,
+                        for creators.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer-partial') %>
+    </body>
+</html>

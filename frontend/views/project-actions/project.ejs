@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Partial for <head>  -->
+    <%- include('./../partials/head-partial') %>
+    <!-- Link to stylesheet  -->
+    <link rel="stylesheet" href="./../css/blog-styles.css">
+
+    <body>
+        <!-- Navbar -->
+        <%- include('./../partials/navbar-partial') %>
+        <!-- Main header -->
+        <div class="row blog-intro-row">
+            <div class="col">
+                <h1 class="blog-main-header"> Bridge Blog </h1>
+            </div>
+        </div>
+        <!-- Row 1 (main content) -->
+        <div class="row blog-main-row">
+
+            <!-- Column 1 (vertical menu) -->
+            <div class="col-2 blog-menu-col">
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <% for(let topic of topicData) {  %>
+                            
+                        <%    if(topic.name === topicElement.name) {  %>
+                                <li class="nav-item topic-menu-item topic-menu-item-selected">
+                                    <a href='/bridge-blog/<%= topic.name %>'><span id="topic-menu-item-text"><%= topic.name %> ></span></a>
+                                    <hr>
+                                </li>
+                        <%    } else {                                %>
+                                <li class="nav-item topic-menu-item">
+                                    <a href='/bridge-blog/<%= topic.name %>'><span id="topic-menu-item-text"><%= topic.name %> ></span></a>
+                                    <hr>
+                                </li>
+                        <%    }                                       %>
+                        <% }                                          %>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 2 (posts) -->
+            <div class="col-10 blog-content-col">
+                <div class="container cards-container">
+                    <!-- IF the topic has any posts -->
+<%                  if (topicElement.posts.length !== 0) {     %>
+
+                        <!-- For each post in the 'posts' array in topicElement -->
+<%                      for(let post of topicElement.posts) {  %>
+                            <div class="card topic-card">
+                                <h5 class="card-header"><%= post.school %>'s post</h5>
+                                <div class="card-body">
+                                    <h4> Authors:</h4>
+                                    <p class="card-text">John Appleseed - Page Turner - Robbin Banks - Justin Case</p>
+                                    <h4 class="card-title">Goal: <%= post.goal %></h4>
+                                    <p class="card-text">
+                                        This is where we will see information about the lesson plan and activities. 
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eius officiis eveniet! Neque 
+                                        nesciunt sunt laboriosam impedit, voluptatem iusto perspiciatis. Consectetur asperiores 
+                                        accusamus veritatis. Enim accusamus cupiditate quam quas consequuntur!
+                                    </p>
+                                    <h4>Lesson plan:</h4>
+                                    <p class="card-text">
+                                        This is where we will see information about the lesson plan and activities. 
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eius officiis eveniet! Neque 
+                                        nesciunt sunt laboriosam impedit, voluptatem iusto perspiciatis. Consectetur asperiores 
+                                        accusamus veritatis. Enim accusamus cupiditate quam quas consequuntur!
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eius officiis eveniet! Neque 
+                                        nesciunt sunt laboriosam impedit, voluptatem iusto perspiciatis. Consectetur asperiores 
+                                        accusamus veritatis. Enim accusamus cupiditate quam quas consequuntur!
+                                    </p>
+                                    <h4>Suggestions:</h4>
+                                    <p class="card-text">
+                                        This is where we will see information about the lesson plan and activities. 
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eius officiis eveniet! Neque 
+                                        nesciunt sunt laboriosam impedit, voluptatem iusto perspiciatis. Consectetur asperiores 
+                                        accusamus veritatis. Enim accusamus cupiditate quam quas consequuntur!
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eius officiis eveniet! Neque 
+                                        nesciunt sunt laboriosam impedit, voluptatem iusto perspiciatis. Consectetur asperiores 
+                                        accusamus veritatis. Enim accusamus cupiditate quam quas consequuntur!
+                                    </p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <a href="/bridge-blog/<%= topicElement.name %>/<%= post.id %>" class="">See full post ></a>
+                                    <% console.log(topicElement.name) %>
+                                    <% console.log(post.id) %>
+                                </div>
+                            </div>
+<%                      }                                       %>
+<%                  } else {                                    %>
+                        <p class="blog-intro-p">
+                            This topic is empty! <br>When a Bridge chapter writes curriculum for this topic, you'll see it here.
+                        </p>
+<%                  }                                           %>
+
+                </div>
+            </div>
+        </div>
+        <%- include('./../partials/footer-partial') %>
+    </body>
+</html>
+
+

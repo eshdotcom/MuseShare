@@ -1,0 +1,20 @@
+<div class="col-2 blog-menu-col">
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <% for(let topic of topicData) {  %>
+                
+            <%    if(topic.name === topicElement.name) {  %>
+                    <li class="nav-item topic-menu-item topic-menu-item-selected">
+                        <a href='/bridge-blog/<%= topic.name %>'><span id="topic-menu-item-text"><%= topic.name %> ></span></a>
+                        <hr>
+                    </li>
+            <%    } else {                                %>
+                    <li class="nav-item topic-menu-item">
+                        <a href='/bridge-blog/<%= topic.name %>'><span id="topic-menu-item-text"><%= topic.name %> ></span></a>
+                        <hr>
+                    </li>
+            <%    }                                       %>
+            <% }                                          %>
+        </ul>
+    </nav>
+</div>
