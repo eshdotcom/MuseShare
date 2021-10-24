@@ -1,4 +1,4 @@
-"""{{ project_name }} URL Configuration
+"""museshare URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^getData/', get_data),
+    url(r'^.*', TemplateView.as_view(template_name="home.html"), name="home")
 ]

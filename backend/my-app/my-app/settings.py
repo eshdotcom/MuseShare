@@ -29,6 +29,16 @@ DEBUG = True
 
 # Application definition
 
+REST_FRAMEWORK = [
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.ServerAuthentication'
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +50,8 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'museshare',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -53,12 +65,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = 'my-app.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = 'my-app.wsgi.application'
 
 
 # Database
