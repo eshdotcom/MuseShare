@@ -1,0 +1,25 @@
+/* GLOBAL */
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #fffbef;
+}
+.row-1 {
+    margin: 5% 0 5% 0;
+}
+
+.creator-left, .creator-right  {
+    margin: 0 5% 0 5%;
+}
+.creator-upload-header, .creator-info-header {
+    margin: 2% 0 8% 0;
+}
+
+
+/* FORM */
+.upload-input {
+    border-radius: 2%;
+}
+
+
