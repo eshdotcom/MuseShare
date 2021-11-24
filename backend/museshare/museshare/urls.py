@@ -31,9 +31,7 @@ urlpatterns += [
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='projects/', permanent=True)),
-]
-
-
+] + + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # For media files
 
 
 # Use static() to add url mapping to serve static files during development (only)
