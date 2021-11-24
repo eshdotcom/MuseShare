@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lfoflho@8jt0&mx3*ag161xnjs35%lr!h!rvmh+&464b**9*fl'
+SECRET_KEY = 'django-insecure--7#32j!c1xc&f_11^58(8_6)8e0@weem4h$e7a$%(eq_%#6)uw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,6 +126,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Media folder stores audio/image data
+# For audio and image files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
