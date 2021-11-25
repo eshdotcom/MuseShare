@@ -1,6 +1,5 @@
 import React, { Component } from 'react' 
-import UploadForm from './UploadForm'
-import HomePage from '../Pages/HomePage'
+import './css/Navbar.css'
 
 class Navbar extends Component {
 
@@ -13,7 +12,7 @@ class Navbar extends Component {
         return(
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href={<HomePage />}> <span id="nav-logo">MuseShare</span></a>
+                    <a className="navbar-brand" href="/"> <span id="nav-logo">MuseShare</span></a>
                     
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -26,17 +25,16 @@ class Navbar extends Component {
                             <a className="nav-link" href="/about-us">About us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/collaborator-page">Collaborator Page</a>
+                            <a className="nav-link" href="/collaborate">Collaborator Page</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href={<UploadForm />}>Creator Zone</a>
+                            <a className="nav-link" href="/upload">Creator Zone</a>
                         </li>
                         </ul>
 
                     </div>
                 </div>
             </nav>
-
         )
     }
 }   
