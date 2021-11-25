@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-// import './css/HomePage.css'
+import './css/HomePage.css'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 class HomePage extends Component {
 
@@ -10,8 +12,8 @@ class HomePage extends Component {
     // render
     render() {
         return(
-            
             <div className="HomePage">
+            <Navbar />
                 <div className="HomePage-container">
                     
                     {/* Intro */}
@@ -30,7 +32,7 @@ class HomePage extends Component {
                                 Find a collaborator for your next piece — all through one straightforward, open-source
                                 platform. <br />
 
-                                <a class="btn btn-light" id="home-intro-btn" href="/creator-zone" role="button">
+                                <a class="btn btn-light" id="home-intro-btn" href="/upload" role="button">
                                     <span>
                                     Upload your work &#62;
                                     </span>
@@ -60,7 +62,7 @@ class HomePage extends Component {
                             </p>
                             <hr />
                             <p class="home-info-p home-info-footer">
-                                <a class="btn btn-dark home-info-btn" href="/creator-zone" role="button"><span class="home-info-btn-txt"> 
+                                <a class="btn btn-dark home-info-btn" href="/upload" role="button"><span class="home-info-btn-txt"> 
                                     Upload your sample &#62;
                                 </span></a>
                             </p>
@@ -74,16 +76,16 @@ class HomePage extends Component {
                             </p>
                             <hr />
                             <p class="home-info-p home-info-footer">
-                                <a class="btn btn-dark home-info-btn" href="/collaborator-page" role="button"><span class="home-info-btn-txt"> 
+                                <a class="btn btn-dark home-info-btn" href="/collaborate" role="button"><span class="home-info-btn-txt"> 
                                     Find a project &#62;
                                 </span></a>
                             </p>
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
 }
-
 export default HomePage

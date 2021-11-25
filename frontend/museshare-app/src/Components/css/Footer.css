@@ -1,0 +1,24 @@
+.footer-row {
+    background-color: white;
+    padding: 3% 0;
+}
+    .footer-col {
+        text-align: center;
+    }
+    .footer-header {
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    #footer-input-box {
+        width: 20%;
+        height: 35px;
+        margin-top: 0.5%;
+    }
+    #subscribe-btn {
+        padding: 0.5% 0.5%;
+        margin-top: 1%;
+    }
+        #subscribe-btn-txt {
+            color: #fffbef;
+            font-size: 1.3em;
+        }

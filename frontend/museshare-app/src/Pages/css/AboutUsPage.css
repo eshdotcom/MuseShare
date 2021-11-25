@@ -1,0 +1,19 @@
+/* HEADER */
+.aboutus-main-header {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+
+    padding: 2% 0;
+    margin-bottom: 0%;
+
+    /* background gradient */
+    background: #C33764; 
+    background: -webkit-linear-gradient(to right, #C33764, #1D2671); 
+    background: linear-gradient(to right, #C33764, #1D2671); 
+}
+
+.temp-header {
+    margin: 3%;
+    font-size: 1.5em;
+}
