@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import './css/UploadForm.css'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 class UploadForm extends Component {
 
@@ -100,6 +102,8 @@ class UploadForm extends Component {
     // render
     render() {
         return(
+            <div>
+            <Navbar />
             <div className="UploadForm container">
                 <div className="row UploadForm-row">
 
@@ -257,7 +261,8 @@ class UploadForm extends Component {
                         </form>
                     </div>
                 </div>
-                
+                <Footer />
+            </div>
             </div>
         )
     }
