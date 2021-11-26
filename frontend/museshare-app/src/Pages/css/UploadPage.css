@@ -1,0 +1,33 @@
+/* ENTIRE PAGE */
+.UploadPage {
+    background-color: #fffbef;
+    margin: 0 0 0 0;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+/* COLUMN 1, 2 */
+.UploadPage-col {
+    /* border: black 1px solid; */
+    margin: 3%;
+}
+/* COLUMN 1 */
+.UploadPage-col1 {
+    margin-left: 13%;
+}
+/* COLUMN 2 */
+.UploadPage-col2 {
+    margin-right: 13%;
+}
+/* COLUMN TITLES */
+.UploadPage-title {
+    margin: 20% 8% 12% 8%;
+    
+}
+/* COLUMN 1 INFO */
+.UploadPage-info {
+    text-align: left;
+    margin: 5%;
+}
