@@ -8,42 +8,28 @@
     overflow: hidden;
 }
 
-/* COLUMN 1, 2 */
-.UploadForm-col {
-    /* border: black 1px solid; */
-    margin: 3%;
-}
-/* COLUMN 1 */
-.UploadForm-col1 {
-    margin-left: 13%;
-}
-/* COLUMN 2 */
+/* COLUMN 2 IN UploadPage.js */
 .UploadForm-col2 {
     margin-right: 13%;
 }
-/* COLUMN TITLES */
+/* FORM TITLE */
 .UploadForm-title {
     margin: 20% 8% 12% 8%;
     
 }
-/* COLUMN 1 INFO */
-.UploadForm-info {
-    text-align: left;
-    margin: 5%;
-}
-/* ACTUAL UPLOAD FORM */
+/* FORM */
 .UploadForm-form {
     text-align: left;
     
 }
-/* FORM LABELS */
-form label {
-    margin: 1%;
-}
-/* BUTTON DIV */
-.UploadForm-btn {
-    margin: 5% 0 5% 0;
-}
-.submit-btn-text {
-    font-size: 1.3em;
-}
+    /* FORM LABELS */
+    form label {
+        margin: 1%;
+    }
+    /* BUTTON DIV */
+    .UploadForm-btn {
+        margin: 5% 0 5% 0;
+    }
+    .submit-btn-text {
+        font-size: 1.3em;
+    }
