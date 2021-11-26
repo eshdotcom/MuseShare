@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import './css/UploadForm.css'
-import Navbar from './Navbar'
-import Footer from './Footer'
 
 class UploadForm extends Component {
 

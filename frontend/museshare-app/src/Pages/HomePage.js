@@ -22,7 +22,7 @@ class HomePage extends Component {
                         {/* Left column (Welcome to MuseShare) */}
                         <div class="col home-intro-col" id="home-intro-col-left">
                             <p class="home-intro-p" id="home-intro-p-left">
-                                Welcome to<br /><span id="bridge-word">MuseShare.</span>
+                                Welcome to<br /><span id="main-word">MuseShare.</span>
                             </p>
                         </div>
 

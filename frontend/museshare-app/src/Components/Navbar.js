@@ -25,7 +25,7 @@ class Navbar extends Component {
                             <a className="nav-link" href="/about-us">About us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/collaborate">Collaborator Page</a>
+                            <a className="nav-link" href="/feed">Collaborator Page</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/upload">Creator Zone</a>

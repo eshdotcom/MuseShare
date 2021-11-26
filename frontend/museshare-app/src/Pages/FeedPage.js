@@ -1,32 +1,45 @@
 import React, { Component } from 'react'
-import './css/CollaboratePage.css'
+import './css/FeedPage.css'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import data from '../data/data'
 
 class CollaboratePage extends Component {
 
     // constructor
-        // use state to store all needed values for Post.js components
+    constructor(props) {
+        super(props);
+        this.state = {
+            tagSelected: false
+        }
+    }
 
     // functions
 
     // render
     render() {
+
+        // if a tag has not been selected, show intro screen
+        // if(!this.state.tagSelected) {
+        //     <p className="feed-intro-p">
+        //         Welcome to the MuseShare Collaborator Page. <br />
+        //         Click a tag in the menu to explore projects uploaded by creators.
+        //     </p> 
+        // }
+
         return (
             <div>
                 <Navbar />
                 {/* Main header */}
                 <div className="row">
-                    <div className="col">
-                        <h1 className="blog-main-header">Collaborator Page</h1>
-                    </div>
+                    <h1 className="feed-main-header sticky">Collaborator Page</h1>
                 </div>
 
                 {/* Main content */}
-                <div className="row blog-main-row">
+                <div className="row feed-main-row">
 
                     {/* Column 1 (vertical menu) */}
-                    <div className="col-2 blog-menu-col">
+                    <div className="col-2 feed-menu-col">
                         <nav className="navbar">
                             <ul className="navbar-nav">
                                 {/* populate vertical menu */}
@@ -35,10 +48,11 @@ class CollaboratePage extends Component {
                     </div>
 
                     {/* Column 2 (posts) */}
-                    <div className="col-10 blog-content-col">
+                    <div className="col-10 feed-content-col">
                         <div className="container empty-cards-container">
+                    
                             {/* Each topic adds cards here */}
-                            <p className="blog-intro-p">
+                            <p className="feed-intro-p">
                                 Welcome to the MuseShare Collaborator Page. <br />
                                 Click a tag in the menu to explore projects uploaded by creators.
                             </p> 

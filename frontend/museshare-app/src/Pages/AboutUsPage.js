@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './css/AboutUsPage.css'
 import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+// import Footer from '../Components/Footer'
 
 class AboutUsPage extends Component {
 
@@ -22,7 +22,7 @@ class AboutUsPage extends Component {
                     </div>
                 </div>
 
-                <h1 className="temp-header">This page is under construction.</h1>
+                <h1 className="temp-msg">This page is under construction.</h1>
 
                 {/* <Footer /> */}
             </div>

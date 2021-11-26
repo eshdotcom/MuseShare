@@ -1,19 +1,36 @@
 /* HEADER */
 .aboutus-main-header {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.7em;
     color: white;
 
-    padding: 2% 0;
+    padding: 1.4% 0;
     margin-bottom: 0%;
 
-    /* background gradient */
-    background: #C33764; 
-    background: -webkit-linear-gradient(to right, #C33764, #1D2671); 
-    background: linear-gradient(to right, #C33764, #1D2671); 
+    /* background gradient - animated */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 12s ease infinite;
+
+    border: 1px solid white;
+    border-top: none;
 }
 
-.temp-header {
+    /* animation syntax */
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+.temp-msg {
     margin: 3%;
     font-size: 1.5em;
 }
